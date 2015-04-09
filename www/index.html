@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <title>Data App</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        
+<!--PEOPLE PAGE-->
+        <section data-role="page" id="people-list" class="active">
+            <div id="head">
+                <h2 class="people">People</h2>
+                <button class="btnAddnewPerson" id="add"></button>
+            </div>
+            <p></p>
+            <ul data-role="listview" id="personList">
+<!--
+                <li data-ref="">List Item 1</li>
+                <hr>
+                <li data-ref="2">List Item 2</li>
+                <hr>
+                <li data-ref="3">List Item 3</li>
+                <hr>
+                <li data-ref="4">List Item 4</li>
+                <hr>
+                <li data-ref="5">List Item 5</li>
+                <hr>
+                <li data-ref="6">List Item 6</li>
+                <hr>
+-->
+            </ul>
+        </section>  
+        
+<!--NEW PERSON MODAL-->
+        <div data-role="overlay">&nbsp;</div>
+
+        <div data-role="modal" class="modal-new-person">
+            <h3>Modal Window Title</h3>
+            <form>
+                <div class="formBox">
+                    <input type="text" id="newPersonTxt" name="txt" class="lg" placeholder="Enter name here" />
+                </div>
+                <div class="formBox">
+                    <input type="button" id="btnCancel" value="Cancel" class="btn" />
+                    <input type="button" id="btnSavePerson" value="Save" class="btn" />
+                </div>
+            </form>
+        </div>
+        
+        
+<!--GIFT IDEAS FOR X PAGE-->
+		<section data-role="page" id="gifts" class="">
+            <div id="head">
+                <h2 class="gift">Gift Ideas for X</h2>
+                <button class="btnAddgiftPerson" id="add"></button>
+            </div>
+			<ul data-role="listview">
+				<!-- 
+				list of items to be dynamically added 
+				single-tap gift idea to toggle purchased state for gift
+ 				double-tap gift idea to remove from list
+				-->
+			</ul>
+		</section>
+<!--NEW GIFT FOR X MODAL-->
+        <div data-role="overlay">&nbsp;</div>
+
+        <div data-role="modal" class="modal-new-gift-x">
+            <h3>Modal Window Title</h3>
+            <form>
+                <div class="formBox" class="selection">
+                    <select name="list" id="list" class="lg">
+                        <option value="1">First Value</option>
+                        <option value="2">Second Value</option>
+                        <option value="3">Third Value</option>
+                        <option value="4">Fourth Value</option>
+                        <option value="5">Fifth Value</option>
+                        <option value="6">Sixth Value</option>
+                    </select>
+                </div>
+                <div class="formBox">
+                    <input type="text" id="newGiftTxt" name="txt" class="lg" placeholder="Enter name here" />
+                </div>
+                <div class="formBox">
+                    <input type="button" id="btnCancel" value="Cancel" class="btn" />
+                    <input type="button" id="btnSaveGiftX" value="Save" class="btn" />
+                </div>
+            </form>
+        </div>
+
+
+        
+        
+<!--OCCASIONS PAGE-->
+        <section data-role="page" id="occasion-list" class="hidden">
+            <div id="head">
+                <h2 class="calendar">Occasions</h2>
+                <button class="btnAddnewOcc" id="add"></button>
+            </div>
+<!--
+			<p class="details">
+			Here is the list of occasions when <em>you</em> buy gifts.
+			</p>
+-->
+            <ul data-role="listview2">
+            </ul>
+		</section>
+<!--NEW OCCASION MODAL-->
+        <div data-role="overlay">&nbsp;</div>
+
+        <div data-role="modal" id="modal-new-occ">
+            <h3>Modal Window Title</h3>
+            <form>
+                <div class="formBox" class="selection">
+                    <select name="list" id="list" class="lg">
+                        <option value="1">First Value</option>
+                        <option value="2">Second Value</option>
+                        <option value="3">Third Value</option>
+                        <option value="4">Fourth Value</option>
+                        <option value="5">Fifth Value</option>
+                        <option value="6">Sixth Value</option>
+                    </select>
+                </div>
+                <div class="formBox">
+                    <input type="text" id="newOccText" name="txt" class="lg" placeholder="Enter name here" />
+                </div>
+                <div class="formBox">
+                    <input type="button" id="btnCancel" value="Cancel" class="btn" />
+                    <input type="button" id="btnSaveOcc" value="Save" class="btn" />
+                </div>
+            </form>
+        </div>
+        
+        
+        
+<!--GIFTS FOR X OCCASION PAGE-->
+        <section data-role="page" id="gifts-for-occasion">
+            <div id="head">
+                <h2 class="gift">Gift Ideas for Occasion</h2>
+                <button class="btnAddgiftOcc" id="add"></button>
+            </div>
+			<ul data-role="listview-2" id="list">
+				<!-- 
+				list of items to be dynamically added 
+				single-tap gift idea to toggle purchased state for gift
+				double-tap gift idea to remove from list
+				-->
+			</ul>
+		</section>
+<!--NEW GIFT FOR X OCCASION MODAL-->
+        <div data-role="overlay">&nbsp;</div>
+
+        <div data-role="modal" class="modal-new-gift-occ">
+            <h3>Modal Window Title</h3>
+            <form>
+                <div class="formBox" class="selection">
+                    <select name="list" id="list" class="lg">
+                        <option value="1">First Value</option>
+                        <option value="2">Second Value</option>
+                        <option value="3">Third Value</option>
+                        <option value="4">Fourth Value</option>
+                        <option value="5">Fifth Value</option>
+                        <option value="6">Sixth Value</option>
+                    </select>
+                </div>
+                <div class="formBox">
+                    <input type="text" id="txt" name="txt" class="lg" placeholder="Enter name here" />
+                </div>
+                <div class="formBox">
+                    <input type="button" id="btnCancel" value="Cancel" class="btn" />
+                    <input type="button" id="btnSaveGiftOcc" value="Save" class="btn" />
+                </div>
+            </form>
+        </div>
+ <div id="output"></div>
+        
+        
+        
+    </div>    
+    <script type="text/javascript" src="js/oldversion.js"></script>
+    <script type="text/javascript" src="js/transition.js"></script>
+    <script type="text/javascript" src="js/hammer.js"></script>
+
+
+</body>
+
+</html>
